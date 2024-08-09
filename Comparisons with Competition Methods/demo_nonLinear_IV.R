@@ -23,8 +23,8 @@ rep.tuning <- function(nu, init, y, x, z) #BIC
   BIC_3_MH <- log(sum((colMeans(Gee_3_MH))^2) / r) + Rn_3_MH * log(n) / n
   
   return(list(beta_3_MAMIS = beta_3_MAMIS, 
-              BIC_3_MAMIS = BIC_3_MAMIS, 
-              beta_3_MH = beta_3_MH, 
+              BIC_3_MAMIS = BIC_3_MAMIS,
+              beta_3_MH = beta_3_MH,
               BIC_3_MH = BIC_3_MH))
 }
 
@@ -40,8 +40,8 @@ rep.fun <- function(ind, nu.seq)
   z <- data[,-c(1:3)]
   
   p <- ncol(x)
-  n <- nrow(z)     #n should be a global variable 
-  r <- ncol(z)     #r should be a global variable
+  n <- nrow(z)
+  r <- ncol(z)
   tun.num <-length(nu.seq)
   
   init_num <- 49
@@ -58,7 +58,7 @@ rep.fun <- function(ind, nu.seq)
   BEL_res_3_MH <- matrix(0, init_num, tun.num*p)
   BIC_res_3_MH <- matrix(0, init_num, tun.num)
   MSE_res_3_MH <- matrix(0, init_num, tun.num)
-
+  
   
   for (i in c(1:init_num)) {
     cat('---- init_', i, '----')
@@ -89,7 +89,6 @@ rep.fun <- function(ind, nu.seq)
   BEL_3_MAMIS <- cbind(BEL_res_3_MAMIS[ind_3_MAMIS_1], BEL_res_3_MAMIS[ind_3_MAMIS_2])
   BIC_3_MAMIS <- BIC_res_3_MAMIS[ind_3_MAMIS_3]
   MSE_3_MAMIS <- MSE_res_3_MAMIS[ind_3_MAMIS_3]
-  
   
   optimal_num_3_MH <- apply(BIC_res_3_MH,1, which.min)
   ind_3_MH_1 <- cbind(1:init_num, optimal_num_3_MH*p-1)
