@@ -35,6 +35,7 @@ hat_beta <- function(ind, nu)
 }
 
 
+
 ############# rep.fun #############
 rep.fun <- function(ind, nu)
 {  
@@ -45,8 +46,8 @@ rep.fun <- function(ind, nu)
   z <- data[,-c(1:3)]
   
   p <- ncol(x)
-  n <- nrow(z)     
-  r <- ncol(z)    
+  n <- nrow(z)     #n should be a global variable 
+  r <- ncol(z)     #r should be a global variable
   
   init_num <- 49
   init.data <- matrix(0, 2, init_num)
