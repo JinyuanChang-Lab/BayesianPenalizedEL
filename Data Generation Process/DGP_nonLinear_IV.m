@@ -22,10 +22,13 @@ for i = 1:p
             disp(r);
             seed_v = seed + r;
             rng(seed_v);
-            [y, x, z] = dgpLinearIV(beta0, rho, useful); % generate the data
+            [y, x, z] = dgpnonLinearIV(beta0, rho, useful); % generate the data
             eval(['data_n_',num2str(n),'_m_', num2str(m), '(',num2str(r),',','1' , ')=','{[y, x, z]}']);
         end
     end
 end
+
+
+
 
 

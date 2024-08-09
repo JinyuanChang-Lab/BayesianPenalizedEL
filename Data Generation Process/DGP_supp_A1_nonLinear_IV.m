@@ -1,8 +1,8 @@
 global  n y x z m Rep
 
 Rep = 500; % # of Monte Carlo replication
-n_choice = [120; 240; 360];
-m_choice = [80; 160; 320; 640];
+n_choice = [120; 240];
+m_choice = [25; 50; 100];
 p = size(n_choice,1);
 q = size(m_choice,1);
 
@@ -22,10 +22,13 @@ for i = 1:p
             disp(r);
             seed_v = seed + r;
             rng(seed_v);
-            [y, x, z] = dgpLinearIV(beta0, rho, useful); % generate the data
+            [y, x, z] = dgpnonLinearIV(beta0, rho, useful); % generate the data
             eval(['data_n_',num2str(n),'_m_', num2str(m), '(',num2str(r),',','1' , ')=','{[y, x, z]}']);
         end
     end
 end
+
+
+
 
 

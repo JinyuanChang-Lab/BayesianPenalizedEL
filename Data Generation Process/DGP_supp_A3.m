@@ -1,8 +1,8 @@
 global  n y x z m Rep
 
 Rep = 500; % # of Monte Carlo replication
-n_choice = [120; 240; 360];
-m_choice = [80; 160; 320; 640];
+n_choice = [20; 40; 60; 80; 100; 120];
+m_choice = [80; 160];
 p = size(n_choice,1);
 q = size(m_choice,1);
 
