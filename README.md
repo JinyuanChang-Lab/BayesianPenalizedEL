@@ -12,7 +12,7 @@ We introduce a novel methodological framework referred to as Bayesian penalized 
 
 * **BInit.mat**: The "BInit.mat" in folder "Real Data Analysis" is the initial points used for the real data analysis in this study.
 
-* **trade_data.mat**: The "trade_data.mat" in [release 1.0.0](https://github.com/Lab-JinyuanChang/BayesianPenalizedEL/releases/tag/1.0.0) is the data file utilized for the real data analysis in this study, as sourced from [Shi (2016, JoE)](https://github.com/zhentaoshi/REL).
+* **trade_data.mat**: The "trade_data.mat" in [release 1.0.0](https://github.com/JinyuanChang-Lab/BayesianPenalizedEL/releases/tag/1.0.0) is the data file utilized for the real data analysis in this study, as sourced from [Shi (2016, JoE)](https://github.com/zhentaoshi/REL).
 
 ## Codes
 
