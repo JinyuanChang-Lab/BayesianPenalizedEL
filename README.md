@@ -6,7 +6,7 @@ We introduce a novel methodological framework referred to as Bayesian penalized 
 
 ## Data and Files
 
-* **Data Generation Process**: The folder "Data Generation Process" includes all the Matlab codes for the data generation process in the numerical studies.
+* **Data Generation Process**: The folder "Data Generation Process" includes all the Matlab codes for the data generation process in the numerical studies, and the associated simulated data can be accessed via the [Google Drive](https://drive.google.com/file/d/1OmH2cOvSc7XZSP7VywsrEzI9-x0B9-61/view).
 
 * **data_SES.mat**: The "data_SES.mat" in folder "Sampling Efficiency and Stability" is the data file utilized for Section 3.2 in the main paper.
 
