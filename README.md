@@ -16,5 +16,5 @@ We introduce a novel methodological framework referred to as Bayesian penalized 
 
 ## Codes
 
-We have adhered to the section titles and provided the main codes used for numerical studies and real data analysis in the main paper. Furthermore, the main codes for the numerical studies in the supplementary material are included in folder "Additional Numerical".
+We have adhered to the section titles and provided the main codes used for numerical studies and real data analysis in the main paper. Furthermore, the main codes for the numerical studies in the supplementary material are included in folder "Additional Numerical Results".
 
