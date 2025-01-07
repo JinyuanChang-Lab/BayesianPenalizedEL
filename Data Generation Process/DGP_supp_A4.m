@@ -1,7 +1,7 @@
 global  n x m Rep
 
 Rep = 500; % # of Monte Carlo replication
-n_choice = [120; 240];
+n_choice = [120];
 
 p = size(n_choice,1);
 
@@ -24,7 +24,7 @@ end
 global  n x m Rep
 
 Rep = 500; % # of Monte Carlo replication
-n_choice = [120; 240];
+n_choice = [120];
 
 p = size(n_choice,1);
 
@@ -44,6 +44,27 @@ for i = 1:p
 end
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+global  n x m Rep
 
+Rep = 500; % # of Monte Carlo replication
+n_choice = [120];
 
+p = size(n_choice,1);
+
+seed = 301;
+theta0 = 0.2;
+
+for i = 1:p
+    n = n_choice(i);
+    for r = 1:Rep
+        seed_v = seed + r;
+        rng(seed_v);
+        Z = random('gamma', 2, 1, n, 1);
+        pro = exp(Z*theta0) ./ (1 + exp(Z*theta0));
+        y = random('Bino', 1, pro', 1, n);
+        y = y';
+        eval(['data_n_',num2str(n), '(',num2str(r),',','1' , ')=','{[y, Z]}']); 
+    end
+end
 
