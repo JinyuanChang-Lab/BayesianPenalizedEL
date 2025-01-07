@@ -463,7 +463,7 @@ arma::vec optimal_lam(arma::mat Gee, double nu,
 Rcpp::List MH_PEL_arma(double beta, arma::vec x, double r, double nu){
   double n = x.n_rows;
   double thresh = 1.0/n;
-  int iter_sl = 6000;
+  int iter_sl = 7000;
   int iter;
   bool verbose=false;
   double sig = (3+(n-120)/80)/sqrt(n*log(r)), U_value, curr_U = 0.0, pro_U = 0.0, ratio, aplha, u, accept = 0.0, accept_rio = 0.0,
@@ -522,7 +522,7 @@ Rcpp::List MH_PEL_arma(double beta, arma::vec x, double r, double nu){
 Rcpp::List MH_EL_arma(double beta, arma::vec x, double r){
   double n = x.n_rows;
   double thresh = 1.0/n;
-  int iter_sl = 6000;
+  int iter_sl = 7000;
   int iter;
   bool verbose=false;
   double sig = (3+(n-120)/80)/sqrt(n*log(r)), U_value, curr_U = 0.0, pro_U = 0.0, ratio, aplha, u, accept = 0.0, accept_rio = 0.0,
@@ -583,7 +583,7 @@ Rcpp::List MH_EL_arma(double beta, arma::vec x, double r){
 // [[Rcpp::export]]
 Rcpp::List MH_Pos_arma(double beta, arma::vec x){
   
-  int iter_sl = 6000;
+  int iter_sl = 7000;
   int iter;
   
   double sig = 0.2, ratio, aplha, u, accept = 0.0, accept_rio = 0.0,
