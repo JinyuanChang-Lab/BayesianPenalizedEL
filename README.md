@@ -1,4 +1,4 @@
-## Official Implementations of `Bayesian Penalized Empirical Likelihood and MCMC Sampling`
+## Official Implementations of `Bayesian Penalized Empirical Likelihood and Markov chain Monte Carlo Sampling`
 
 ## Introduction
 
